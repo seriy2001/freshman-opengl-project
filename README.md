@@ -11,10 +11,10 @@ As I mentioned, in this project I will use OpenGL and freeglut library to simula
 
 
 Given formulas:           1) Horizontal distance x = Vx * t;
-                              2) Vertical distance y = Vyo * t - 1/2 * g * t;
-                              3) Maximum height reached H = (Vo^2 * sin(θ)^2)/2 * g;
-                              4) Horizontal range R = Vo^2 * sin(2 * θ)/g;
-                              5) Time of flight T = 2 * Vo * sin(θ)/g;
+                                    2) Vertical distance y = Vyo * t - 1/2 * g * t;
+                                    3) Maximum height reached H = (Vo^2 * sin(θ)^2)/2 * g;
+                                    4) Horizontal range R = Vo^2 * sin(2 * θ)/g;
+                                    5) Time of flight T = 2 * Vo * sin(θ)/g;
                               
 Here, 
 - Vx is the velocity along x-axis;
@@ -26,18 +26,18 @@ Here,
 
                                                      FIRST PART
 
-GOALS:       -- We need to draw first projectile, using the given functions, and of course 2D OpenGL graphical library;
-             -- The second projectile should fire up at the same time as the first one, and collide at one point. 
-                When two projectiles have met at the "impact position", both projectiles should stop.
+GOALS:       -- We need to draw first projectile, using the given functions, and 2D OpenGL graphical library;
+                    -- The second projectile should fire up at the same time as the first one, and collide at one point. 
+                        When two projectiles have met at the "impact position", both projectiles should stop.
 
                                                      SECOND PART
 
 GOALS:       -- We need to have first projectile(enemy), and three other projectiles that will fire from the other (right)
-                side of the screen;
-             -- The second projectile should collide with the first one at the rise (of the enemy projectile); 
-             -- The third projectile should collide with the first one on the top (of the enemy projectile); 
-             -- And finally, the fourth projectile should collide with the first one on the fall (of the enemy projectile),
-                and all projcetiles should stop; 
+                        side of the screen;
+                    -- The second projectile should collide with the first one at the rise (of the enemy projectile); 
+                    -- The third projectile should collide with the first one on the top (of the enemy projectile); 
+                    -- And finally, the fourth projectile should collide with the first one on the fall (of the enemy projectile),
+                        and all projcetiles should stop; 
 
                                                      THIRD PART
 
