@@ -21,9 +21,10 @@ void initialize(void)
 
 static void keyPressFunc(unsigned char key, int x, int y)
 {
-    switch(key) {
-        case ESC:
-            exit(1);
+    switch(key) 
+    {
+      case ESC:
+      exit(1);
     }
 }
 
@@ -41,8 +42,6 @@ void display(void)
     d2 = 650;
     d3 = 800;
     z = -500;
-
-    //t += 0.0005;
 
     Uox1 = (d1 - Vo * cos(Pheta * PI / 180) * 2)/2;
     Uox2 = (d2 - Vo * cos(Pheta * PI / 180)*  time_top)/time_top;
