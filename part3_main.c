@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <GL/glut.h>
-#include <GL/gl.h>
 #include <math.h>
 #include <unistd.h>
 
@@ -17,10 +16,7 @@ void initialize(void)
     glEnable(GL_POINT_SMOOTH);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    //gluOrtho(0, 1000, 0, 500, -20, 1);
-    gluPerspective(90.0, 1000.0 / 500.0, 0.1, 1000.0);
-    //glTranslate(-1,-1,0);
-    //glScale(2.0/1000.0,2.0/500.0, 1.0);
+    gluPerspective(90.0, 2.0 / 1.0, 0.1, 1000.0);
 }
 
 static void keyPressFunc(unsigned char key, int x, int y)
@@ -30,8 +26,6 @@ static void keyPressFunc(unsigned char key, int x, int y)
             exit(1);
     }
 }
-
-//float t = 0;
 
 void display(void)
 {
@@ -54,7 +48,7 @@ void display(void)
     Uox2 = (d2 - Vo * cos(Pheta * PI / 180)*  time_top)/time_top;
     Uox3 = (d3 - Vo * cos(Pheta * PI / 180) * 8)/8;
 
-      for(float t=0; t < 12 ; t += 0.0005)
+      for(float t=0; t < 12 ; t += 0.005)
     {
     float x1 = (Vo * cos(Pheta * PI / 180) * t);
     float y1 = (Vo * sin(Pheta * PI / 180) * t - 0.5 * g * t * t);
@@ -70,8 +64,15 @@ void display(void)
 
     glBegin(GL_POINTS);
     glVertex3d(x1, y1, z);
-    glVertex3d(x2, y2, z);
-    glVertex3d(x3, y3, z);
+    if(!(x2 - 0.1 <= x1 && x1 <= x4 + 0.1))
+        {
+            glVertex3d(x2, y2, z);
+        }
+    if(!(x3 - 0.1 <= x1 && x1 <= x4 + 0.1))
+        {
+            glVertex3d(x3, y3, z);
+        }
+
     glVertex3d(x4, y4, z);
 
     if  (x1+0.1 >= x4 && x4+0.1 >= x1)
@@ -79,14 +80,10 @@ void display(void)
             break;
         }
 
+    glEnd();
     glFlush();
-    glutPostRedisplay();
     }
 }
-
-
-
-
 
 int main(int argc, char** argv)
 {

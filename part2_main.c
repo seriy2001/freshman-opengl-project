@@ -64,9 +64,16 @@ void display(void)
 
         glBegin(GL_POINTS);
         glVertex2d(x1, y1);
-        glVertex2d(x2, y2);
-        glVertex2d(x3, y3);
-        glVertex2d(x4, y4);
+    if(!(x2 - 0.1 <= x1 && x1 <= x4 + 0.1))
+        {
+            glVertex2d(x2, y2);
+        }
+    if(!(x3 - 0.1 <= x1 && x1 <= x4 + 0.1))
+        {
+            glVertex3d(x3, y3);
+        }
+
+    glVertex2d(x4, y4);
 
         if  (x1+0.1 >= x4 && x4+0.1 >= x1)
         {
