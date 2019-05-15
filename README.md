@@ -44,4 +44,4 @@ GOALS:       -- We need to have first projectile(enemy), and three other project
 GOALS:       -- The same goal as for the second part, except at this time I need to perform all calculations in 3D;
 
 
----------------------------------------------------------<end>----------------------------------------------------------------
+-------------------------------------------------------<end>----------------------------------------------------------------
