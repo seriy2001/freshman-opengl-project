@@ -10,11 +10,12 @@ As I mentioned, in this project I will use OpenGL and freeglut library to simula
                                       BALLISTIC IMPACT WITH GRAPHICAL SIMULATION
 
 
-Given formulas:           1) Horizontal distance x = Vx * t;
-                                    2) Vertical distance y = Vyo * t - 1/2 * g * t;
-                                    3) Maximum height reached H = (Vo^2 * sin(θ)^2)/2 * g;
-                                    4) Horizontal range R = Vo^2 * sin(2 * θ)/g;
-                                    5) Time of flight T = 2 * Vo * sin(θ)/g;
+Given formulas:
+1. Horizontal distance x = Vx * t;
+2. Vertical distance y = Vyo * t - 1/2 * g * t;
+3. Maximum height reached H = (Vo^2 * sin(θ)^2)/2 * g;
+4. Horizontal range R = Vo^2 * sin(2 * θ)/g;
+5. Time of flight T = 2 * Vo * sin(θ)/g;
                               
 Here, 
 - Vx is the velocity along x-axis;
